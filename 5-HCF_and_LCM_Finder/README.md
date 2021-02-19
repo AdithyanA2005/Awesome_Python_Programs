@@ -1,0 +1,60 @@
+# HCF_and_LCM_Finder
+
+#### **_This is finder which will give LCM or HCF (as selected) for the entered Two Numbers_**
+
+
+## **_This is the strategy that is used in this program_**
+
+Let 20, 28 be the two numbers which we want to find the LCM of:-
+first we will find the lcm and then using the lcm we will find the hcf
+
+	1. Using the inbuilt function 'max' in python we will find the largest number out of the two numbers which the user had inputed
+		numberOne = int(input("Enter the first number"))
+		numberTwo = int(input("Enter the second number"))
+		maxNumber = max(numberOne, numberTwo)
+	
+	2. Using 'While loop' we run the condition many times and we will break the condition once we reached the desired section
+		while True:	
+	
+	3. a) Now we will put a if-case to find the LCM; We know that teh LCM(20, 28) is 140 which will be stored in the variable 'maxNumber'
+ 	   b) Now we will modular divide the 'maxNumber' by the two inputed numbers and on the if case we will check when there value becomes '0'
+	   c) After the condition becomes true now we will assign the 'maxNumber' to a variable 'result'
+			 if maxNumber % numberTwo == 0 and maxNumber % numberOne == 0:
+        		     result = maxNumber
+       			     break
+	4. The above was how we shoud do after getting the right number; This is what we should do when we dont get that number
+	   We are simply increasing the value of 'maxNumber' by '1' each time 
+			else:
+       			    maxNumber = maxNumber + 1
+	   		
+
+Finding the HCF:-
+	Let us take the example of the above number itself and find the HCF using the Above LCM
+	
+	Given:
+		number1 = 20
+		number2 = 28
+		LCM = 140
+		HCF = ?
+
+		We know that,
+		number1  x  number2 = LCM  x  HCF 
+		
+		Therefor,
+		HCF  =  number1  x  number2
+			-------------------
+				LCM
+
+
+		That means,
+		HCF  =  20  x  28
+			--------
+		          140
+
+		     =	560
+			---
+			140
+
+		 HCF =  5
+		 ________
+		----------
