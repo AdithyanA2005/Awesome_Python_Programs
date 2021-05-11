@@ -1,0 +1,4 @@
+.idea/
+folder_cleaner/__pycache__/
+.vscode/
+static/
